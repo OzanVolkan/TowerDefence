@@ -4,12 +4,18 @@ using UnityEngine;
 
 public abstract class Turret : MonoBehaviour
 {
-    [SerializeField] protected Transform partToRotate;    
+    [Header("Setup Fields")]
+    [SerializeField] protected Transform partToRotate;
+    [SerializeField] protected Transform firePoint;
+
+    [Space(5)][ Header("Attributes")]
     [SerializeField] protected float range;
+    [SerializeField] protected float fireRate;
 
     protected Transform target;    
     protected string enemyTag = "Enemy";
     protected float turnSpeed = 10f;
+    protected float fireCountdown;
 
     protected void UpdateTarget()
     {
@@ -44,6 +50,17 @@ public abstract class Turret : MonoBehaviour
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+    }
+
+    protected void ShootFire(string tag)
+    {
+        if (fireCountdown <= 0)
+        {
+            EventManager.Broadcast(GameEvent.OnSpawnFromPool, tag, firePoint.position, firePoint.rotation);
+            fireCountdown = fireRate / 1f;
+        }
+
+        fireCountdown -= Time.deltaTime;
     }
 
     private void OnDrawGizmosSelected()

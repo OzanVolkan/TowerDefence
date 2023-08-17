@@ -15,6 +15,7 @@ public class StandartTurret : Turret
             return;
 
         RotateToEnemy();
+        ShootFire("Bullet");
     }
 
 }
