@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-public class ObjectPooler : MonoBehaviour
+public class ObjectPooler : SingletonManager<ObjectPooler>
 {
     [System.Serializable]
     public class Pool
@@ -73,24 +73,4 @@ public class ObjectPooler : MonoBehaviour
 
         return objectToSpawn;
     }
-
-    #region EVENTS
-
-    public void OnSpawnFromPool(string tag, Vector3 position, Quaternion rotation)
-    {
-        SpawnFromPool(tag,position,rotation);
-    }
-
-    private void OnEnable()
-    {
-        EventManager.AddHandler(GameEvent.OnSpawnFromPool, new Action<string,Vector3,Quaternion>(OnSpawnFromPool));
-
-    }
-
-    private void OnDisable()
-    {
-        EventManager.RemoveHandler(GameEvent.OnSpawnFromPool, new Action<string, Vector3, Quaternion>(OnSpawnFromPool));
-    }
-
-    #endregion
 }

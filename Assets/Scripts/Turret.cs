@@ -56,7 +56,12 @@ public abstract class Turret : MonoBehaviour
     {
         if (fireCountdown <= 0)
         {
-            EventManager.Broadcast(GameEvent.OnSpawnFromPool, tag, firePoint.position, firePoint.rotation);
+            GameObject bulletGO = ObjectPooler.Instance.SpawnFromPool(tag, firePoint.position, firePoint.rotation);
+            Bullet bullet = bulletGO.GetComponent<Bullet>();
+
+            if (bullet != null)
+                bullet.Seek(target);
+
             fireCountdown = fireRate / 1f;
         }
 
