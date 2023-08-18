@@ -5,8 +5,9 @@ public class Node : MonoBehaviour
     [SerializeField] Color hoverColor;
 
     Color startColor;
+    Vector3 buildOffset = Vector3.up * 0.5f;
     Renderer rend;
-    bool hasTurret;
+    GameObject currentTurret;
 
     private void Start()
     {
@@ -18,17 +19,26 @@ public class Node : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
-        if (hasTurret)
+        if (BuildManager.Instance.GetTurretToBuild() == null)
+            return;
+
+        if (currentTurret != null)
         {
             Debug.Log("Can't build here! : TODO: Display on screen");
             return;
         }
 
-        EventManager.Broadcast(GameEvent.OnBuildStandartTurret, transform.position, transform.rotation);
-        hasTurret = true;
+        GameObject turretToBuild = BuildManager.Instance.GetTurretToBuild();
+        currentTurret = Instantiate(turretToBuild, transform.position + buildOffset, transform.rotation);
     }
     private void OnMouseEnter()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
+        if (BuildManager.Instance.GetTurretToBuild() == null)
+            return;
+
         rend.material.color = hoverColor;
     }
 

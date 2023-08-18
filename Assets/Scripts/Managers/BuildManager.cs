@@ -1,38 +1,34 @@
 using UnityEngine;
 using System;
-public class BuildManager : MonoBehaviour
+public class BuildManager : SingletonManager<BuildManager>
 {
-    [SerializeField] GameObject standartTurret;
-    [SerializeField] GameObject missileLauncher;
-    [SerializeField] GameObject laserBeamer;
+    [SerializeField] GameObject _standartTurret;
+    public GameObject StandartTurret { get { return _standartTurret; } }
 
-    Vector3 buildOffset = Vector3.up * 0.5f;
+    [SerializeField] GameObject _missileLauncher;
+    public GameObject MissileLauncher { get { return _missileLauncher; } }
 
-    private void OnEnable()
+    [SerializeField] GameObject _laserBeamer;
+    public GameObject LaserBeamer { get { return _laserBeamer; } }
+
+
+    private GameObject _turretToBuild;
+    public GameObject TurretToBuild
     {
-        EventManager.AddHandler(GameEvent.OnBuildStandartTurret, new Action<Vector3, Quaternion>(OnBuildStandartTurret));
-        EventManager.AddHandler(GameEvent.OnBuildMissileLauncher, new Action<Vector3, Quaternion>(OnBuildMissileLauncher));
-        EventManager.AddHandler(GameEvent.OnBuildLaserBeamer, new Action<Vector3, Quaternion>(OnBuildLaserBeamer));
-    }
-    private void OnDisable()
-    {
-        EventManager.RemoveHandler(GameEvent.OnBuildStandartTurret, new Action<Vector3, Quaternion>(OnBuildStandartTurret));
-        EventManager.RemoveHandler(GameEvent.OnBuildMissileLauncher, new Action<Vector3, Quaternion>(OnBuildMissileLauncher));
-        EventManager.RemoveHandler(GameEvent.OnBuildLaserBeamer, new Action<Vector3, Quaternion>(OnBuildLaserBeamer));
+        get { return _turretToBuild; }
+        set { _turretToBuild = value; }
     }
 
-    void OnBuildStandartTurret(Vector3 position, Quaternion rotation)
+
+    public GameObject GetTurretToBuild()
     {
-        Instantiate(standartTurret, position + buildOffset, rotation);
+        return TurretToBuild;
     }
 
-    void OnBuildMissileLauncher(Vector3 position, Quaternion rotation)
+    public void SetTurretToBuild(GameObject turret)
     {
-        Instantiate(missileLauncher, position + buildOffset, rotation);
+        TurretToBuild = turret;
     }
 
-    void OnBuildLaserBeamer(Vector3 position, Quaternion rotation)
-    {
-        Instantiate(laserBeamer, position + buildOffset, rotation);
-    }
+
 }
