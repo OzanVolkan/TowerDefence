@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
 
     [Header("Attributes")]
     [SerializeField] float speed;
+    [SerializeField] float expolosionRadius;
 
     Transform target;
 
@@ -36,14 +37,44 @@ public class Bullet : MonoBehaviour
         }
 
         transform.Translate(dir.normalized * dstThisFrame, Space.World);
+        transform.LookAt(target);
     }
 
     private void HitTarget()
     {
         GameObject impactEff = Instantiate(bulletImpactEffect, transform.position, transform.rotation);
-        Destroy(impactEff, 2f);
+        Destroy(impactEff, 5f);
 
-        Destroy(target.gameObject);
+        if (expolosionRadius < 0f)
+        {
+            Explode();
+        }
+        else
+        {
+            Destroy(target.gameObject);
+        }
+
         gameObject.SetActive(false);
+    }
+
+    private void Explode()
+    {
+        int enemyLayer = 6;
+        Collider[] colliders = Physics.OverlapSphere(transform.position, expolosionRadius, 1 << enemyLayer);
+        foreach (Collider collider in colliders)
+        {
+            Damage(collider.transform);
+        }
+    }
+
+    private void Damage(Transform enemy)
+    {
+        Destroy(enemy.gameObject);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, expolosionRadius);
     }
 }

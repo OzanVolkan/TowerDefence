@@ -48,3 +48,6 @@ MonoBehaviour:
   - _prefab: {fileID: 5457312379274583890, guid: a6cc72284308014478749398fde9a7d4, type: 3}
     _tag: Bullet
     _size: 150
+  - _prefab: {fileID: 5071772832312689937, guid: 8d1dc951c48cf334c918d8d0b89bec36, type: 3}
+    _tag: Missile
+    _size: 150

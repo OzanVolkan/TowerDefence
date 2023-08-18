@@ -63,6 +63,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01fd01403953de74ea39ce17e313f680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standartTurret: {fileID: 8323943605042184598, guid: f5f261ea40f78654fac15f19429c299d, type: 3}
-  missileLauncher: {fileID: 0}
-  laserBeamer: {fileID: 0}
+  _standartTurret: {fileID: 8323943605042184598, guid: f5f261ea40f78654fac15f19429c299d, type: 3}
+  _missileLauncher: {fileID: 7744343339081509661, guid: 4b8c6c1885e60a840b6ce5b5c4aca93a, type: 3}
+  _laserBeamer: {fileID: 0}

@@ -15597,10 +15597,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4011783737245543906, guid: d9d459c4e9adbf64bb82478bfea67483, type: 3}
-      propertyPath: _standartTurret
-      value: 
-      objectReference: {fileID: 8323943605042184598, guid: f5f261ea40f78654fac15f19429c299d, type: 3}
     - target: {fileID: 8589017281175157713, guid: d9d459c4e9adbf64bb82478bfea67483, type: 3}
       propertyPath: m_Name
       value: GameManager
