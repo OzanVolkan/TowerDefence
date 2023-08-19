@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
+    [SerializeField] TurretBluePrint standartTurret;
+    [SerializeField] TurretBluePrint missileLauncher;
+    [SerializeField] TurretBluePrint laserBeamer;
     public void PuchaseStandartTurret()
     {
-        BuildManager.Instance.SetTurretToBuild(BuildManager.Instance.StandartTurret);
+        BuildManager.Instance.SelectTurretToBuild(standartTurret);
     }
     public void PuchaseMissileLauncher()
     {
-        BuildManager.Instance.SetTurretToBuild(BuildManager.Instance.MissileLauncher);
+        BuildManager.Instance.SelectTurretToBuild(missileLauncher);
     }
     public void PuchaseLaserBeamer()
     {
-        BuildManager.Instance.SetTurretToBuild(BuildManager.Instance.LaserBeamer);
+        BuildManager.Instance.SelectTurretToBuild(laserBeamer);
     }
 }

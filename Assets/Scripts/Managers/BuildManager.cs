@@ -12,20 +12,22 @@ public class BuildManager : SingletonManager<BuildManager>
     public GameObject LaserBeamer { get { return _laserBeamer; } }
 
 
-    private GameObject _turretToBuild;
-    public GameObject TurretToBuild
+    private TurretBluePrint _turretToBuild;
+    public TurretBluePrint TurretToBuild
     {
         get { return _turretToBuild; }
         set { _turretToBuild = value; }
     }
 
+    public bool CanBuild { get { return TurretToBuild != null; } }
 
-    public GameObject GetTurretToBuild()
+    public void BuildTurretOn(Node node, Vector3 position)
     {
-        return TurretToBuild;
+        GameObject turret = Instantiate(TurretToBuild.Prefab, position, Quaternion.identity);
+        node.CurrentTurret = turret;
     }
 
-    public void SetTurretToBuild(GameObject turret)
+    public void SelectTurretToBuild(TurretBluePrint turret)
     {
         TurretToBuild = turret;
     }
