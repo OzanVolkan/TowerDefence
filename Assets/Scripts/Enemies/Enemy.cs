@@ -7,6 +7,8 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected int health;
     [SerializeField] protected int moneyReward;
 
+    [Header("Particle")]
+    [SerializeField] protected GameObject deathEffect;
     protected float Speed { get; set; }
 
     private Transform target;
@@ -54,6 +56,10 @@ public abstract class Enemy : MonoBehaviour
     private void Die()
     {
         DataManager.Instance.gameData.Money += moneyReward;
+
+        GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
+        Destroy(effect, 5f);
+
         Destroy(gameObject);
     }
 }
