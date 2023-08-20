@@ -11,6 +11,7 @@ public class Bullet : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] float speed;
     [SerializeField] float expolosionRadius;
+    [SerializeField] int damage;
 
     Transform target;
 
@@ -51,7 +52,7 @@ public class Bullet : MonoBehaviour
         }
         else
         {
-            Destroy(target.gameObject);
+            Damage(target);
         }
 
         gameObject.SetActive(false);
@@ -69,7 +70,11 @@ public class Bullet : MonoBehaviour
 
     private void Damage(Transform enemy)
     {
-        Destroy(enemy.gameObject);
+        Enemy e = enemy.GetComponent<Enemy>();
+        if (e != null)
+        {
+            e.TakeDamage(damage);
+        }
     }
 
     private void OnDrawGizmosSelected()

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8589017281175157714}
   - component: {fileID: 8589017281175157715}
   - component: {fileID: 4011783737245543906}
+  - component: {fileID: 844974683028960848}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -66,3 +67,16 @@ MonoBehaviour:
   _standartTurret: {fileID: 8323943605042184598, guid: f5f261ea40f78654fac15f19429c299d, type: 3}
   _missileLauncher: {fileID: 7744343339081509661, guid: 4b8c6c1885e60a840b6ce5b5c4aca93a, type: 3}
   _laserBeamer: {fileID: 0}
+  buildEffect: {fileID: 4676981200299959344, guid: f9541807afd4ea345852f3305e26307c, type: 3}
+--- !u!114 &844974683028960848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8589017281175157713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 721708f67af30024e91331da0bf05a8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

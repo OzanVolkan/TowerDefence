@@ -3,10 +3,11 @@ using UnityEngine.EventSystems;
 public class Node : MonoBehaviour
 {
     [SerializeField] Color hoverColor;
+    [SerializeField] Color notEnoughMoneyColor;
 
     [Header("Optional")]
     [SerializeField] GameObject _currentTurret;
-    public  GameObject CurrentTurret
+    public GameObject CurrentTurret
     {
         get { return _currentTurret; }
         set { _currentTurret = value; }
@@ -47,7 +48,11 @@ public class Node : MonoBehaviour
         if (!BuildManager.Instance.CanBuild)
             return;
 
-        rend.material.color = hoverColor;
+        if (BuildManager.Instance.HasMoney)
+            rend.material.color = hoverColor;
+
+        else
+            rend.material.color = notEnoughMoneyColor;
     }
 
     private void OnMouseExit()

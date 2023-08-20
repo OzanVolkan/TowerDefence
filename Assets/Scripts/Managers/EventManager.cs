@@ -3,9 +3,7 @@ using System.Collections.Generic;
 
 public enum GameEvent
 {
-    OnBuildStandartTurret,
-    OnBuildMissileLauncher,
-    OnBuildLaserBeamer
+
 }
 public static class EventManager
 {

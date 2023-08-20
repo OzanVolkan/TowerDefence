@@ -48,6 +48,7 @@ MonoBehaviour:
   bulletImpactEffect: {fileID: 8807582759988574313, guid: 1eb6764453ac8d44f94d055c2d53fb46, type: 3}
   speed: 30
   expolosionRadius: 8
+  damage: 50
 --- !u!1 &6380411512418610663
 GameObject:
   m_ObjectHideFlags: 0

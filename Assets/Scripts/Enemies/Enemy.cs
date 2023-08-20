@@ -1,12 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 public abstract class Enemy : MonoBehaviour
 {
+    [SerializeField] protected int health;
+    [SerializeField] protected int moneyReward;
+
     protected float Speed { get; set; }
 
     private Transform target;
     private int wavepointIndex;
+
     protected void SetEnemyTarget()
     {
         target = WayPoint.points[0];
@@ -27,6 +32,7 @@ public abstract class Enemy : MonoBehaviour
     {
         if (wavepointIndex >= WayPoint.points.Length - 1)
         {
+            GameManager.Instance.GetDamage();
             Destroy(gameObject);
             return;
         }
@@ -35,4 +41,19 @@ public abstract class Enemy : MonoBehaviour
         target = WayPoint.points[wavepointIndex];
     }
 
+    public void TakeDamage(int amount)
+    {
+        health -= amount;
+
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        DataManager.Instance.gameData.Money += moneyReward;
+        Destroy(gameObject);
+    }
 }
