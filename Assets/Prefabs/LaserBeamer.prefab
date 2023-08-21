@@ -136,6 +136,7 @@ MonoBehaviour:
   firePoint: {fileID: 3684134780557712316}
   range: 20
   fireRate: 1
+  lineRenderer: {fileID: 595406023352090966}
 --- !u!120 &595406023352090966
 LineRenderer:
   m_ObjectHideFlags: 0
