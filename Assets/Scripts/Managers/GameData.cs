@@ -46,8 +46,8 @@ public class GameData : ScriptableObject
     public GameData()
     {
         StandartTurretCost = 100;
-        MissileLauncherCost = 200;
-        LaserBeamerCost = 300;
+        MissileLauncherCost = 250;
+        LaserBeamerCost = 350;
     }
 
 }

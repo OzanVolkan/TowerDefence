@@ -6418,7 +6418,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $300
+  m_text: $350
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12056,7 +12056,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '$200
+  m_text: '$250
 
 '
   m_isRightToLeft: 0
@@ -17460,8 +17460,8 @@ MonoBehaviour:
     _prefab: {fileID: 7744343339081509661, guid: 4b8c6c1885e60a840b6ce5b5c4aca93a, type: 3}
     _cost: 250
   laserBeamer:
-    _prefab: {fileID: 0}
-    _cost: 0
+    _prefab: {fileID: 1149400067959302076, guid: 24e40d9c77715984a95cb3309f4c780c, type: 3}
+    _cost: 350
 --- !u!1001 &8589017280400342204
 PrefabInstance:
   m_ObjectHideFlags: 0
