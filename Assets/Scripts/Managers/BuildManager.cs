@@ -11,6 +11,12 @@ public class BuildManager : SingletonManager<BuildManager>
     [SerializeField] GameObject _laserBeamer;
     public GameObject LaserBeamer { get { return _laserBeamer; } }
 
+    private Node _selectedNode;
+    public  Node SelectedNode
+    {
+        get { return _selectedNode; }
+        set { _selectedNode = value; }
+    }
 
     private TurretBluePrint _turretToBuild;
     public TurretBluePrint TurretToBuild
@@ -18,6 +24,8 @@ public class BuildManager : SingletonManager<BuildManager>
         get { return _turretToBuild; }
         set { _turretToBuild = value; }
     }
+
+    [SerializeField] NodeUI nodeUI;
 
     [Header("Particle")]
     [SerializeField] GameObject buildEffect;
@@ -48,7 +56,27 @@ public class BuildManager : SingletonManager<BuildManager>
     {
         TurretToBuild = turret;
         turret.Cost = _cost;
+
+        DeselectNode();
     }
 
+    public void SelectNode(Node node)
+    {
+        if (SelectedNode == node)
+        {
+            DeselectNode();
+            return;
+        }
 
+        SelectedNode = node;
+        TurretToBuild = null;
+
+        nodeUI.SetTarget(node);
+    }
+
+    public void DeselectNode()
+    {
+        SelectedNode = null;
+        nodeUI.Hide();
+    }
 }

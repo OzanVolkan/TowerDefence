@@ -28,14 +28,15 @@ public class Node : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
-        if (!BuildManager.Instance.CanBuild)
-            return;
 
         if (CurrentTurret != null)
         {
-            Debug.Log("Can't build here! : TODO: Display on screen");
+            BuildManager.Instance.SelectNode(this);
             return;
         }
+
+        if (!BuildManager.Instance.CanBuild)
+            return;
 
         BuildManager.Instance.BuildTurretOn(this, GetBuildPosition());
 
@@ -60,7 +61,7 @@ public class Node : MonoBehaviour
         rend.material.color = startColor;
     }
 
-    private Vector3 GetBuildPosition()
+    public Vector3 GetBuildPosition()
     {
         return transform.position + buildOffset;
     }
