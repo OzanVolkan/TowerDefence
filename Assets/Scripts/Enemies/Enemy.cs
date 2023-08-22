@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 public abstract class Enemy : MonoBehaviour
 {
-    [SerializeField] protected int health;
+    [Header("Attributes")]
+    [SerializeField] protected float health;
+    [SerializeField] protected float startSpeed;
     [SerializeField] protected int moneyReward;
 
     [Header("Particle")]
@@ -28,6 +30,8 @@ public abstract class Enemy : MonoBehaviour
         {
             GetNextWayPoint();
         }
+
+        Speed = startSpeed;
     }
     
     protected void GetNextWayPoint()
@@ -41,9 +45,10 @@ public abstract class Enemy : MonoBehaviour
 
         wavepointIndex++;
         target = WayPoint.points[wavepointIndex];
+        return;
     }
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(float amount)
     {
         health -= amount;
 
@@ -51,6 +56,11 @@ public abstract class Enemy : MonoBehaviour
         {
             Die();
         }
+    }
+
+    public void Slow(float amount)
+    {
+        Speed = startSpeed * (1 - amount);
     }
 
     private void Die()

@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d332e0c6e243dc4478c755ce6de7bffb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 150
+  startSpeed: 15
   moneyReward: 100
   deathEffect: {fileID: 5795630538225912400, guid: b25c9fb291ce6a649b4438cc06be3fe8, type: 3}

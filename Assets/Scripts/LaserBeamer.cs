@@ -8,6 +8,8 @@ public class LaserBeamer : Turret
     [SerializeField] ParticleSystem impactEffect;
     [SerializeField] Light impactLight;
 
+    private int damageOverTime = 30;
+    private float slowAmount = 0.5f;
     private void Start()
     {
         InvokeRepeating(nameof(UpdateTarget), 0f, 0.25f);
@@ -31,6 +33,9 @@ public class LaserBeamer : Turret
     }
     void Laser()
     {
+        targetEnemy.TakeDamage(damageOverTime * Time.deltaTime);
+        targetEnemy.Slow(slowAmount);
+
         if (!lineRenderer.enabled)
         {
             lineRenderer.enabled = true;

@@ -6,7 +6,7 @@ public class EnemyMid : Enemy
 {
     public EnemyMid()
     {
-        Speed = 10f;
+        Speed = startSpeed;
     }
     void Start()
     {

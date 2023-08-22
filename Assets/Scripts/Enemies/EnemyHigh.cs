@@ -6,7 +6,7 @@ public class EnemyHigh : Enemy
 {
     public EnemyHigh()
     {
-        Speed = 15f;
+        Speed = startSpeed;
     }
     void Start()
     {

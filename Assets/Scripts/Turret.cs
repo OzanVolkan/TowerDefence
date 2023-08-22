@@ -12,10 +12,12 @@ public abstract class Turret : MonoBehaviour
     [SerializeField] protected float range;
     [SerializeField] protected float fireRate;
 
-    protected Transform target;    
+    protected Transform target;
+    protected Enemy targetEnemy;
     protected string enemyTag = "Enemy";
     protected float turnSpeed = 10f;
     protected float fireCountdown;
+
 
     protected void UpdateTarget()
     {
@@ -37,6 +39,7 @@ public abstract class Turret : MonoBehaviour
         if (nearestEnemy != null && shortestDistance <= range)
         {
             target = nearestEnemy.transform;
+            targetEnemy = nearestEnemy.GetComponent<Enemy>();
         }
         else
         {
