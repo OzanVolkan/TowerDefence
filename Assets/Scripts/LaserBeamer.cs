@@ -5,6 +5,8 @@ using UnityEngine;
 public class LaserBeamer : Turret
 {
     [SerializeField] LineRenderer lineRenderer;
+    [SerializeField] ParticleSystem impactEffect;
+    [SerializeField] Light impactLight;
 
     private void Start()
     {
@@ -15,7 +17,11 @@ public class LaserBeamer : Turret
         if (target == null)
         {
             if (lineRenderer.enabled)
+            {
                 lineRenderer.enabled = false;
+                impactLight.enabled = false;
+                impactEffect.Stop();
+            }
 
             return;
         }
@@ -26,9 +32,18 @@ public class LaserBeamer : Turret
     void Laser()
     {
         if (!lineRenderer.enabled)
+        {
             lineRenderer.enabled = true;
+            impactLight.enabled = true;
+            impactEffect.Play();
+        }
 
         lineRenderer.SetPosition(0, firePoint.position);
         lineRenderer.SetPosition(1, target.position);
+
+        Vector3 dir = firePoint.position - target.position;
+        impactEffect.transform.position = target.position + dir.normalized;
+
+        impactEffect.transform.rotation = Quaternion.LookRotation(dir);
     }
 }
