@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GameManager : SingletonManager<GameManager>
 {
-    private int livesAmount = 20;
+    [SerializeField] int livesAmount = 20;
+    [SerializeField] GameObject gameOverScreen;
 
     private int _lives;
     public int Lives
@@ -23,19 +24,47 @@ public class GameManager : SingletonManager<GameManager>
         }
     }
 
+    private int _rounds;
+
+    public int Rounds
+    {
+        get { return _rounds; }
+        set { _rounds = value; }
+    }
+
+
+    private bool _isGameOver;
+    public bool IsGameOver
+    {
+        get { return _isGameOver; }
+        set { _isGameOver = value; }
+    }
+
+
     private void Start()
     {
         Lives = livesAmount;
+        IsGameOver = false;
+        Rounds = 0;
     }
 
     public void GetDamage()
     {
+        if (IsGameOver)
+            return;
+
         Lives -= 1;
 
         if (Lives <= 0)
         {
-            Debug.Log("Fail!");
+            EndGame();
         }
+    }
+
+    private void EndGame()
+    {
+        IsGameOver = true;
+        gameOverScreen.SetActive(true);
     }
 
 }

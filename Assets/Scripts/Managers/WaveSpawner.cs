@@ -17,6 +17,9 @@ public class WaveSpawner : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.IsGameOver)
+            return;
+
         if (Countdown <= 0f)
         {
             StartCoroutine(SpawnWave());
@@ -30,11 +33,10 @@ public class WaveSpawner : MonoBehaviour
 
     private IEnumerator SpawnWave()
     {
+        GameManager.Instance.Rounds++;
+
         int tempDifficultyIndex = difficultyIndex;
-        //tempDifficultyIndex = Mathf.Clamp(tempDifficultyIndex, 0, 2);
-
-
-
+        
         for (int i = 0; i < waveIndex; i++)
         {
 
@@ -58,10 +60,5 @@ public class WaveSpawner : MonoBehaviour
         }
         waveIndex++;
         difficultyIndex++;
-    }
-
-    private void SpawnEnemy()
-    {
-
     }
 }

@@ -16,6 +16,12 @@ public class CameraController : MonoBehaviour
     float maxY = 80f;
     void Update()
     {
+        if (GameManager.Instance.IsGameOver)
+        {
+            this.enabled = false;
+            return;
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape))
             canMove = !canMove;
 
