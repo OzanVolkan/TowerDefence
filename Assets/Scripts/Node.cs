@@ -5,12 +5,25 @@ public class Node : MonoBehaviour
     [SerializeField] Color hoverColor;
     [SerializeField] Color notEnoughMoneyColor;
 
-    [Header("Optional")]
-    [SerializeField] GameObject _currentTurret;
+    private GameObject _currentTurret;
     public GameObject CurrentTurret
     {
         get { return _currentTurret; }
         set { _currentTurret = value; }
+    }
+
+    private TurretBluePrint _turretBluePrint;
+    public TurretBluePrint TurretBluePrint
+    {
+        get { return _turretBluePrint; }
+        set { _turretBluePrint = value; }
+    }
+
+    private bool _isUpgraded;
+    public bool IsUpgraded
+    {
+        get { return _isUpgraded; }
+        set { _isUpgraded = value; }
     }
 
 
@@ -38,8 +51,51 @@ public class Node : MonoBehaviour
         if (!BuildManager.Instance.CanBuild)
             return;
 
-        BuildManager.Instance.BuildTurretOn(this, GetBuildPosition());
+        BuildTurret(BuildManager.Instance.GetTurretToBuild());
+    }
 
+    private void BuildTurret(TurretBluePrint turretBluePrint)
+    {
+        if (DataManager.Instance.gameData.Money < turretBluePrint.Cost)
+        {
+            Debug.Log("Not enough money to build that!");
+            return;
+        }
+
+        DataManager.Instance.gameData.Money -= turretBluePrint.Cost;
+
+        GameObject turret = Instantiate(turretBluePrint.Prefab, GetBuildPosition(), Quaternion.identity);
+        CurrentTurret = turret;
+
+        GameObject effect = Instantiate(BuildManager.Instance.buildEffect, GetBuildPosition(), Quaternion.identity);
+        Destroy(effect, 5f);
+
+        Debug.Log("Turret build!");
+    }
+
+    public void UpgradeTurret()
+    {
+        if (DataManager.Instance.gameData.Money < TurretBluePrint.UpgradeCost)
+        {
+            Debug.Log("Not enough money to upgrade that!");
+            return;
+        }
+
+        DataManager.Instance.gameData.Money -= TurretBluePrint.UpgradeCost;
+
+        //Eski model basic turretý yok ediyoruz.
+        Destroy(CurrentTurret);
+
+        //Upgraded versiyonunu oluþturuyoruz.
+        GameObject turret = Instantiate(TurretBluePrint.UpgradedPrefab, GetBuildPosition(), Quaternion.identity);
+        CurrentTurret = turret;
+
+        GameObject effect = Instantiate(BuildManager.Instance.buildEffect, GetBuildPosition(), Quaternion.identity);
+        Destroy(effect, 5f);
+
+        IsUpgraded = true;
+
+        Debug.Log("Turret upgraded!");
     }
     private void OnMouseEnter()
     {

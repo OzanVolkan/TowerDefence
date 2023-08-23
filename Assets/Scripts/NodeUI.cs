@@ -24,4 +24,14 @@ public class NodeUI : MonoBehaviour
     {
         ui.SetActive(false);
     }
+
+    #region Buttons
+
+    public void Upgrade()
+    {
+        target.UpgradeTurret();
+        BuildManager.Instance.DeselectNode();
+    }
+
+    #endregion
 }
