@@ -16,5 +16,6 @@ public class EnemyMid : Enemy
     void Update()
     {
         MoveToTarget();
+        SetHealthBar();
     }
 }

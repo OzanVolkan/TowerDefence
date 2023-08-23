@@ -113,7 +113,7 @@ MonoBehaviour:
   partToRotate: {fileID: 2771864077132815883}
   firePoint: {fileID: 2771864077256388157}
   range: 40
-  fireRate: 0.4
+  fireRate: 0.6
 --- !u!1 &9166253945474430916
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,5 +16,6 @@ public class EnemyHigh : Enemy
     void Update()
     {
         MoveToTarget();
+        SetHealthBar();
     }
 }
