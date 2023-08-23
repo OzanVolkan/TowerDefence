@@ -69,7 +69,7 @@ public class Node : MonoBehaviour
 
         TurretBluePrint = turretBluePrint;
 
-        GameObject effect = Instantiate(BuildManager.Instance.buildEffect, GetBuildPosition(), Quaternion.identity);
+        GameObject effect = Instantiate(BuildManager.Instance.BuildEffect, GetBuildPosition(), Quaternion.identity);
         Destroy(effect, 5f);
 
         Debug.Log("Turret build!");
@@ -92,13 +92,25 @@ public class Node : MonoBehaviour
         GameObject turret = Instantiate(TurretBluePrint.UpgradedPrefab, GetBuildPosition(), Quaternion.identity);
         CurrentTurret = turret;
 
-        GameObject effect = Instantiate(BuildManager.Instance.buildEffect, GetBuildPosition(), Quaternion.identity);
+        GameObject effect = Instantiate(BuildManager.Instance.BuildEffect, GetBuildPosition(), Quaternion.identity);
         Destroy(effect, 5f);
 
         IsUpgraded = true;
 
         Debug.Log("Turret upgraded!");
     }
+
+    public void SellTurret()
+    {
+        DataManager.Instance.gameData.Money += TurretBluePrint.GetSellAmount();
+
+        Destroy(CurrentTurret);
+        TurretBluePrint = null;
+
+        GameObject effect = Instantiate(BuildManager.Instance.SellEffect, GetBuildPosition(), Quaternion.identity);
+        Destroy(effect, 5f);
+    }
+
     private void OnMouseEnter()
     {
         if (EventSystem.current.IsPointerOverGameObject())

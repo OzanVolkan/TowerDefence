@@ -37,5 +37,8 @@ public class TurretBluePrint
         set { _upgradeCost = value; }
     }
 
-
+    public int GetSellAmount()
+    {
+        return Cost / 2;
+    }
 }

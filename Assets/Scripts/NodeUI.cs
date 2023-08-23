@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine.UI;
 public class NodeUI : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI upgradeText;
+    [SerializeField] TextMeshProUGUI upgradeText, sellAmountText;
     [SerializeField] Button upgradeBtn;
 
     private Node target;
@@ -30,6 +30,8 @@ public class NodeUI : MonoBehaviour
             upgradeText.text = "<b> UPGRADED </b>";
         }
 
+        sellAmountText.text = "<b> SELL </b> \n$" + _target.TurretBluePrint.GetSellAmount();
+
         ui.SetActive(true);
     }
 
@@ -43,6 +45,12 @@ public class NodeUI : MonoBehaviour
     public void Upgrade()
     {
         target.UpgradeTurret();
+        BuildManager.Instance.DeselectNode();
+    }
+
+    public void Sell()
+    {
+        target.SellTurret();
         BuildManager.Instance.DeselectNode();
     }
 

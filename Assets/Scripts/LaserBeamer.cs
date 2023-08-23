@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class LaserBeamer : Turret
 {
+    [SerializeField] float slowAmount = 0.5f;
+    [SerializeField] int damageOverTime = 30;
+
+    [Header("Requirements")]
     [SerializeField] LineRenderer lineRenderer;
     [SerializeField] ParticleSystem impactEffect;
     [SerializeField] Light impactLight;
-
-    private int damageOverTime = 30;
-    private float slowAmount = 0.5f;
+    
     private void Start()
     {
         InvokeRepeating(nameof(UpdateTarget), 0f, 0.25f);

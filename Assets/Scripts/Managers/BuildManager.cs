@@ -28,7 +28,19 @@ public class BuildManager : SingletonManager<BuildManager>
     [SerializeField] NodeUI nodeUI;
 
     [Header("Particle")]
-    public GameObject buildEffect; // Yeri değiştirilecek, public bırakma!!
+    [SerializeField] GameObject _buildEffect;
+    public GameObject BuildEffect
+    {
+        get { return _buildEffect; }
+        set { _buildEffect = value; }
+    }
+
+    [SerializeField] GameObject _sellEffect;
+    public GameObject SellEffect
+    {
+        get { return _sellEffect; }
+        set { _sellEffect = value; }
+    }
 
     public bool CanBuild { get { return TurretToBuild != null; } }
     public bool HasMoney { get { return DataManager.Instance.gameData.Money >= TurretToBuild.Cost; } }
