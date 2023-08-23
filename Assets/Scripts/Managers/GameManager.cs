@@ -6,6 +6,7 @@ public class GameManager : SingletonManager<GameManager>
 {
     [SerializeField] int livesAmount = 20;
     [SerializeField] GameObject gameOverScreen;
+    [SerializeField] GameObject pauseScreen;
 
     private int _lives;
     public int Lives
@@ -47,7 +48,13 @@ public class GameManager : SingletonManager<GameManager>
         IsGameOver = false;
         Rounds = 0;
     }
-
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+        {
+            Pause();
+        }
+    }
     public void GetDamage()
     {
         if (IsGameOver)
@@ -65,6 +72,21 @@ public class GameManager : SingletonManager<GameManager>
     {
         IsGameOver = true;
         gameOverScreen.SetActive(true);
+    }
+
+    public void Pause()
+    {
+        pauseScreen.SetActive(!pauseScreen.activeSelf);
+
+        if (pauseScreen.activeSelf)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+
     }
 
 }

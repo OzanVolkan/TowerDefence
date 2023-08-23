@@ -70,8 +70,6 @@ MonoBehaviour:
   nodeUI: {fileID: 0}
   _buildEffect: {fileID: 4676981200299959344, guid: f9541807afd4ea345852f3305e26307c, type: 3}
   _sellEffect: {fileID: 4303132806795626626, guid: c1d670ebce71ac24c928d954f0bf6e64, type: 3}
-  buildEffect: {fileID: 4676981200299959344, guid: f9541807afd4ea345852f3305e26307c, type: 3}
-  sellEffect: {fileID: 4303132806795626626, guid: c1d670ebce71ac24c928d954f0bf6e64, type: 3}
 --- !u!114 &844974683028960848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,3 +84,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   livesAmount: 2
   gameOverScreen: {fileID: 0}
+  pauseScreen: {fileID: 0}
