@@ -1,9 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
+using UnityEngine.UI;
 public class NodeUI : MonoBehaviour
 {
+    [SerializeField] TextMeshProUGUI upgradeText;
+    [SerializeField] Button upgradeBtn;
+
     private Node target;
     private GameObject ui;
 
@@ -16,6 +18,17 @@ public class NodeUI : MonoBehaviour
         target = _target;
 
         transform.position = target.GetBuildPosition();
+
+        if (!target.IsUpgraded)
+        {
+            upgradeText.text = "<b> UPGRADE </b> \n$" + _target.TurretBluePrint.UpgradeCost;
+            upgradeBtn.interactable = true;
+        }
+        else
+        {
+            upgradeBtn.interactable = false;
+            upgradeText.text = "<b> UPGRADED </b>";
+        }
 
         ui.SetActive(true);
     }

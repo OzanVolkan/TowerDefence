@@ -9,14 +9,14 @@ public class Shop : MonoBehaviour
     [SerializeField] TurretBluePrint laserBeamer;
     public void PuchaseStandartTurret()
     {
-        BuildManager.Instance.SelectTurretToBuild(standartTurret,DataManager.Instance.gameData.StandartTurretCost);
+        BuildManager.Instance.SelectTurretToBuild(standartTurret,standartTurret.Cost);
     }
     public void PuchaseMissileLauncher()
     {
-        BuildManager.Instance.SelectTurretToBuild(missileLauncher, DataManager.Instance.gameData.MissileLauncherCost);
+        BuildManager.Instance.SelectTurretToBuild(missileLauncher, missileLauncher.Cost);
     }
     public void PuchaseLaserBeamer()
     {
-        BuildManager.Instance.SelectTurretToBuild(laserBeamer, DataManager.Instance.gameData.LaserBeamerCost);
+        BuildManager.Instance.SelectTurretToBuild(laserBeamer, laserBeamer.Cost);
     }
 }

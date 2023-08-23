@@ -67,6 +67,8 @@ public class Node : MonoBehaviour
         GameObject turret = Instantiate(turretBluePrint.Prefab, GetBuildPosition(), Quaternion.identity);
         CurrentTurret = turret;
 
+        TurretBluePrint = turretBluePrint;
+
         GameObject effect = Instantiate(BuildManager.Instance.buildEffect, GetBuildPosition(), Quaternion.identity);
         Destroy(effect, 5f);
 

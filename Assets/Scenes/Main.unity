@@ -2994,6 +2994,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e153663d60408324999acd112ad6bb23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upgradeText: {fileID: 515154994}
+  upgradeBtn: {fileID: 911002135}
 --- !u!1001 &329908943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4568,7 +4570,7 @@ GameObject:
   - component: {fileID: 515154995}
   - component: {fileID: 515154994}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: UpgradeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4616,7 +4618,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '<b> UPGRADE </b>
 
-    100$'
+    $100'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6e787493be8367842bb9cded2508ca2a, type: 2}
   m_sharedMaterial: {fileID: 7090691575116549099, guid: 6e787493be8367842bb9cded2508ca2a, type: 2}
@@ -8342,7 +8344,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 911002136}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 326112524}
+        m_TargetAssemblyTypeName: NodeUI, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &911002136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9216,7 +9230,7 @@ GameObject:
   - component: {fileID: 999591647}
   - component: {fileID: 999591646}
   m_Layer: 0
-  m_Name: Image
+  m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9230,7 +9244,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999591644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9239,8 +9253,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -32.5}
-  m_SizeDelta: {x: 35, y: 35}
+  m_AnchoredPosition: {x: 0, y: -31.153}
+  m_SizeDelta: {x: 35, y: 22.217}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &999591646
 MonoBehaviour:
@@ -9264,7 +9278,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -17449,7 +17463,7 @@ GameObject:
   - component: {fileID: 1921184235}
   - component: {fileID: 1921184234}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: SellText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17497,7 +17511,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '<b> SELL </b>
 
-    50$'
+    $50'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6e787493be8367842bb9cded2508ca2a, type: 2}
   m_sharedMaterial: {fileID: 7090691575116549099, guid: 6e787493be8367842bb9cded2508ca2a, type: 2}
@@ -20364,7 +20378,7 @@ MonoBehaviour:
   standartTurret:
     _prefab: {fileID: 8323943605042184598, guid: f5f261ea40f78654fac15f19429c299d, type: 3}
     _cost: 100
-    _upgradedPrefab: {fileID: 0}
+    _upgradedPrefab: {fileID: 4548858935687847302, guid: e4fc3eaba4eab164db49a4bdec5c72b0, type: 3}
     _upgradeCost: 60
   missileLauncher:
     _prefab: {fileID: 7744343339081509661, guid: 4b8c6c1885e60a840b6ce5b5c4aca93a, type: 3}
