@@ -1,10 +1,13 @@
 # TowerDefence
 A Tower Defence Game With Basic Assets That I Developed Using Following OOP Principles & Other Patterns:
 
+
 • Encapsulation
 • Inheritance
 • Abstraction
 • Interfaces
+
+* 3 Tier Architecture
 * Usage of Properties
 * Usage of Constructors
 * Sealed Keywords
