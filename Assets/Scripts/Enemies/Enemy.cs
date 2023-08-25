@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public abstract class Enemy : MonoBehaviour
+public abstract class Enemy : MonoBehaviour, IEffectable
 {
     [Header("Attributes")]
     [SerializeField] protected float startSpeed;
@@ -74,8 +74,7 @@ public abstract class Enemy : MonoBehaviour
     {
         DataManager.Instance.gameData.Money += moneyReward;
 
-        GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
-        Destroy(effect, 5f);
+        PlayEffect();
 
         GameManager.Instance.CurrentEnemies.Remove(gameObject);
         Destroy(gameObject);
@@ -85,5 +84,11 @@ public abstract class Enemy : MonoBehaviour
     {
         healthTempAmount = health / 100f;
         healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, healthTempAmount, healthReduceSpeed * Time.deltaTime);
+    }
+
+    public void PlayEffect()
+    {
+        GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
+        Destroy(effect, 5f);
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHigh : Enemy
+public sealed class EnemyHigh : Enemy
 {
     public EnemyHigh()
     {

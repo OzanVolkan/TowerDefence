@@ -20,12 +20,14 @@ public class OverlayCanvasManager : MonoBehaviour
     public void Retry()
     {
         Time.timeScale = 1;
+        EventManager.Broadcast(GameEvent.OnSaveData);
         EventManager.Broadcast(GameEvent.OnFadeOut, SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Menu()
     {
         Time.timeScale = 1;
+        EventManager.Broadcast(GameEvent.OnSaveData);
         EventManager.Broadcast(GameEvent.OnFadeOut, 1);
     }
 
@@ -37,7 +39,8 @@ public class OverlayCanvasManager : MonoBehaviour
     public void NextLevel()
     {
         DataManager.Instance.gameData.Level++;
-        //SAVE
+        DataManager.Instance.gameData.CurrentLevel++;
+        EventManager.Broadcast(GameEvent.OnSaveData);
         EventManager.Broadcast(GameEvent.OnFadeOut, SceneManager.GetActiveScene().buildIndex);
     }
 

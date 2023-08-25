@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e078247198b8fc41b44b123b856d3cd, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  _money: 5289
-  _level: 3
+  _money: 400
+  _level: 1

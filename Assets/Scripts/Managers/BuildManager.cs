@@ -12,7 +12,7 @@ public class BuildManager : SingletonManager<BuildManager>
     public GameObject LaserBeamer { get { return _laserBeamer; } }
 
     private Node _selectedNode;
-    public  Node SelectedNode
+    public Node SelectedNode
     {
         get { return _selectedNode; }
         set { _selectedNode = value; }
@@ -32,14 +32,12 @@ public class BuildManager : SingletonManager<BuildManager>
     public GameObject BuildEffect
     {
         get { return _buildEffect; }
-        set { _buildEffect = value; }
     }
 
     [SerializeField] GameObject _sellEffect;
     public GameObject SellEffect
     {
         get { return _sellEffect; }
-        set { _sellEffect = value; }
     }
 
     public bool CanBuild { get { return TurretToBuild != null; } }

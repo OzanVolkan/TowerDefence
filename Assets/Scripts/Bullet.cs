@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Bullet : MonoBehaviour, IEffectable
 {
     [Header("Particles")]
     [SerializeField] GameObject bulletImpactEffect;
@@ -43,8 +43,7 @@ public class Bullet : MonoBehaviour
 
     private void HitTarget()
     {
-        GameObject impactEff = Instantiate(bulletImpactEffect, transform.position, transform.rotation);
-        Destroy(impactEff, 5f);
+        PlayEffect();
 
         if (expolosionRadius < 0f)
         {
@@ -81,5 +80,11 @@ public class Bullet : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, expolosionRadius);
+    }
+
+    public void PlayEffect()
+    {
+        GameObject _impactEff = Instantiate(bulletImpactEffect, transform.position, transform.rotation);
+        Destroy(_impactEff, 5f);
     }
 }

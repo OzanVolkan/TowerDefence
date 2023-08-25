@@ -21,11 +21,19 @@ public class LevelSelector : MonoBehaviour
             }
 
             lvlSelectButtons[i].transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = (i + 1).ToString();
+
+            int index = i;
+            lvlSelectButtons[i].onClick.AddListener(() => SetCurrentLevel(index));
         }
     }
 
     public void SelectLevel()
     {
         EventManager.Broadcast(GameEvent.OnFadeOut, SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    private void SetCurrentLevel(int index)
+    {
+        DataManager.Instance.gameData.CurrentLevel = index + 1;
     }
 }

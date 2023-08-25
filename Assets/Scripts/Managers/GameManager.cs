@@ -56,10 +56,10 @@ public class GameManager : SingletonManager<GameManager>
 
     private void Start()
     {
-        Lives = 13 - DataManager.Instance.gameData.Level; // Gamedata'dan current level arrayi þeklinde çek
+        Lives = 13 - DataManager.Instance.gameData.CurrentLevel;
+        LevelRound = DataManager.Instance.gameData.CurrentLevel + 4;
         IsGameOver = false;
         Rounds = 0;
-        LevelRound = DataManager.Instance.gameData.Level + 4; // Gamedata'dan current level arrayi þeklinde çek
     }
     private void Update()
     {

@@ -27,4 +27,13 @@ public class GameData : ScriptableObject
         get { return _level; }
         set { _level = value; }
     }
+
+    private int _currentLevel;
+
+    public int CurrentLevel
+    {
+        get { return _currentLevel; }
+        set { _currentLevel = value; }
+    }
+
 }

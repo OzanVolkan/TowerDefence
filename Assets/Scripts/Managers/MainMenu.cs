@@ -12,6 +12,7 @@ public class MainMenu : MonoBehaviour
 
     public void Quit()
     {
+        EventManager.Broadcast(GameEvent.OnSaveData);
         Debug.Log("Exiting...");
         Application.Quit();
     }
