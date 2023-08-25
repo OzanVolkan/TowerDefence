@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class GameManager : SingletonManager<GameManager>
 {
-    [SerializeField] int livesAmount = 20;
     [SerializeField] GameObject gameOverScreen;
     [SerializeField] GameObject pauseScreen;
+    [SerializeField] GameObject gameWonScreen;
+
+    [SerializeField] List<GameObject> _currentEnemies;
+    public List<GameObject> CurrentEnemies
+    {
+        get { return _currentEnemies; }
+        set { _currentEnemies = value; }
+    }
+
 
     private int _lives;
     public int Lives
@@ -26,13 +34,18 @@ public class GameManager : SingletonManager<GameManager>
     }
 
     private int _rounds;
-
     public int Rounds
     {
         get { return _rounds; }
         set { _rounds = value; }
     }
 
+    private int _levelRound;
+    public int LevelRound
+    {
+        get { return _levelRound; }
+        set { _levelRound = value; }
+    }
 
     private bool _isGameOver;
     public bool IsGameOver
@@ -41,12 +54,12 @@ public class GameManager : SingletonManager<GameManager>
         set { _isGameOver = value; }
     }
 
-
     private void Start()
     {
-        Lives = livesAmount;
+        Lives = 13 - DataManager.Instance.gameData.Level; // Gamedata'dan current level arrayi þeklinde çek
         IsGameOver = false;
         Rounds = 0;
+        LevelRound = DataManager.Instance.gameData.Level + 4; // Gamedata'dan current level arrayi þeklinde çek
     }
     private void Update()
     {
@@ -87,6 +100,14 @@ public class GameManager : SingletonManager<GameManager>
             Time.timeScale = 1;
         }
 
+    }
+
+    public void Win(int _waveIndex)
+    {
+        if (CurrentEnemies.Count == 0 && LevelRound == _waveIndex)
+        {
+            gameWonScreen.SetActive(true);
+        }
     }
 
 }

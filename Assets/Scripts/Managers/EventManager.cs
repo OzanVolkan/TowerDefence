@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public enum GameEvent
 {
-
+    OnFadeOut
 }
 public static class EventManager
 {

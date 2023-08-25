@@ -21,4 +21,10 @@ public class GameData : ScriptableObject
         }
     }
 
+    [SerializeField] private int _level;
+    public int Level
+    {
+        get { return _level; }
+        set { _level = value; }
+    }
 }

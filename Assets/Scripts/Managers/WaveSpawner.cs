@@ -22,6 +22,11 @@ public class WaveSpawner : MonoBehaviour
 
         if (Countdown <= 0f)
         {
+            GameManager.Instance.Win(waveIndex);
+
+            if (GameManager.Instance.LevelRound == waveIndex)
+                return;
+
             StartCoroutine(SpawnWave());
             Countdown = timeBetweenWaves;
         }
@@ -53,7 +58,8 @@ public class WaveSpawner : MonoBehaviour
                 spawnType = enemyTypes[tempDifficultyIndex];
             }
 
-            Instantiate(spawnType, spawnPoint.position, spawnPoint.rotation);
+            GameObject e = Instantiate(spawnType, spawnPoint.position, spawnPoint.rotation);
+            GameManager.Instance.CurrentEnemies.Add(e);
 
             yield return new WaitForSeconds(0.5f);
             tempDifficultyIndex--;

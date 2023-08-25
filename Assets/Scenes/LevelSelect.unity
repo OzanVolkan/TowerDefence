@@ -130,6 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1324503269}
     m_Modifications:
+    - target: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1748140767}
+    - target: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 527962350110203546, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
       propertyPath: m_Name
       value: LevelButton (8)
@@ -232,6 +240,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1324503269}
     m_Modifications:
+    - target: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1748140767}
+    - target: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 527962350110203546, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
       propertyPath: m_Name
       value: LevelButton (4)
@@ -410,6 +426,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1324503269}
     m_Modifications:
+    - target: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1748140767}
+    - target: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 527962350110203546, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
       propertyPath: m_Name
       value: LevelButton (9)
@@ -512,6 +536,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1324503269}
     m_Modifications:
+    - target: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1748140767}
+    - target: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 527962350110203546, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
       propertyPath: m_Name
       value: LevelButton (3)
@@ -607,6 +639,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 527962350110203547, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
   m_PrefabInstance: {fileID: 351071585}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &378836600 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+  m_PrefabInstance: {fileID: 262254537}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &528329523
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,6 +827,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 527962350110203547, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
   m_PrefabInstance: {fileID: 527962350901370354}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &827900780 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+  m_PrefabInstance: {fileID: 527962350901370354}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -958,6 +1012,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1324503269}
     m_Modifications:
+    - target: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1748140767}
+    - target: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 527962350110203546, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
       propertyPath: m_Name
       value: LevelButton (11)
@@ -1053,6 +1115,63 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 527962350110203547, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
   m_PrefabInstance: {fileID: 1083601144}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1215998685
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1000012998371668, guid: fcf3f6aa890b2ff4aae9516cdad5dcd2, type: 3}
+      propertyPath: m_Name
+      value: SceneFader
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012742019986, guid: fcf3f6aa890b2ff4aae9516cdad5dcd2, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012742019986, guid: fcf3f6aa890b2ff4aae9516cdad5dcd2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012742019986, guid: fcf3f6aa890b2ff4aae9516cdad5dcd2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012742019986, guid: fcf3f6aa890b2ff4aae9516cdad5dcd2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012742019986, guid: fcf3f6aa890b2ff4aae9516cdad5dcd2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012742019986, guid: fcf3f6aa890b2ff4aae9516cdad5dcd2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012742019986, guid: fcf3f6aa890b2ff4aae9516cdad5dcd2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012742019986, guid: fcf3f6aa890b2ff4aae9516cdad5dcd2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012742019986, guid: fcf3f6aa890b2ff4aae9516cdad5dcd2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012742019986, guid: fcf3f6aa890b2ff4aae9516cdad5dcd2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012742019986, guid: fcf3f6aa890b2ff4aae9516cdad5dcd2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fcf3f6aa890b2ff4aae9516cdad5dcd2, type: 3}
 --- !u!1 &1228373475
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,6 +1299,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228373475}
   m_CullTransparentMesh: 1
+--- !u!114 &1233504781 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+  m_PrefabInstance: {fileID: 317801186}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1257687486
 GameObject:
   m_ObjectHideFlags: 0
@@ -1403,37 +1533,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
---- !u!1 &1554355308
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1554355309}
-  m_Layer: 0
-  m_Name: LevelSelector
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1554355309
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1554355308}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1563612533
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,6 +1637,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1744040607 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+  m_PrefabInstance: {fileID: 241073626}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1748140762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1550,8 +1660,9 @@ GameObject:
   - component: {fileID: 1748140765}
   - component: {fileID: 1748140764}
   - component: {fileID: 1748140763}
+  - component: {fileID: 1748140767}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: LevelSelectorCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1640,6 +1751,31 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1748140767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748140762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06f2b7d792d898429f11f1ed6d347a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lvlSelectButtons:
+  - {fileID: 827900780}
+  - {fileID: 2033216246}
+  - {fileID: 1856788708}
+  - {fileID: 1875094712}
+  - {fileID: 378836600}
+  - {fileID: 1919724791}
+  - {fileID: 1779569925}
+  - {fileID: 2101136733}
+  - {fileID: 1744040607}
+  - {fileID: 1233504781}
+  - {fileID: 2081257093}
+  - {fileID: 2099465710}
 --- !u!1001 &1779569921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1647,6 +1783,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1324503269}
     m_Modifications:
+    - target: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1748140767}
+    - target: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 527962350110203546, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
       propertyPath: m_Name
       value: LevelButton (6)
@@ -1742,6 +1886,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 527962350110203547, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
   m_PrefabInstance: {fileID: 1779569921}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1779569925 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+  m_PrefabInstance: {fileID: 1779569921}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1856788704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1749,6 +1904,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1324503269}
     m_Modifications:
+    - target: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1748140767}
+    - target: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 527962350110203546, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
       propertyPath: m_Name
       value: LevelButton (2)
@@ -1844,6 +2007,28 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 527962350110203547, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
   m_PrefabInstance: {fileID: 1856788704}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1856788708 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+  m_PrefabInstance: {fileID: 1856788704}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1875094712 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+  m_PrefabInstance: {fileID: 351071585}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1919724787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1851,6 +2036,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1324503269}
     m_Modifications:
+    - target: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1748140767}
+    - target: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 527962350110203546, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
       propertyPath: m_Name
       value: LevelButton (5)
@@ -1946,6 +2139,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 527962350110203547, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
   m_PrefabInstance: {fileID: 1919724787}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1919724791 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+  m_PrefabInstance: {fileID: 1919724787}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2033216242
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1953,6 +2157,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1324503269}
     m_Modifications:
+    - target: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1748140767}
+    - target: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 527962350110203546, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
       propertyPath: m_Name
       value: LevelButton (1)
@@ -2048,6 +2260,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 527962350110203547, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
   m_PrefabInstance: {fileID: 2033216242}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2033216246 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+  m_PrefabInstance: {fileID: 2033216242}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2081257089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2055,6 +2278,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1324503269}
     m_Modifications:
+    - target: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1748140767}
+    - target: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 527962350110203546, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
       propertyPath: m_Name
       value: LevelButton (10)
@@ -2150,6 +2381,28 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 527962350110203547, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
   m_PrefabInstance: {fileID: 2081257089}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2081257093 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+  m_PrefabInstance: {fileID: 2081257089}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2099465710 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+  m_PrefabInstance: {fileID: 1083601144}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2101136729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2157,6 +2410,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1324503269}
     m_Modifications:
+    - target: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1748140767}
+    - target: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 527962350110203546, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
       propertyPath: m_Name
       value: LevelButton (7)
@@ -2252,6 +2513,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 527962350110203547, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
   m_PrefabInstance: {fileID: 2101136729}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2101136733 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+  m_PrefabInstance: {fileID: 2101136729}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &527962350901370354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2259,6 +2531,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1324503269}
     m_Modifications:
+    - target: {fileID: 527962350110203544, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1748140767}
     - target: {fileID: 527962350110203546, guid: d22c5503d62b582458289a4dfc6dc66b, type: 3}
       propertyPath: m_Name
       value: LevelButton

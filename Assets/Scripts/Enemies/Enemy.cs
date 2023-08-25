@@ -45,6 +45,7 @@ public abstract class Enemy : MonoBehaviour
         if (wavepointIndex >= WayPoint.points.Length - 1)
         {
             GameManager.Instance.GetDamage();
+            GameManager.Instance.CurrentEnemies.Remove(gameObject);
             Destroy(gameObject);
             return;
         }
@@ -76,6 +77,7 @@ public abstract class Enemy : MonoBehaviour
         GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(effect, 5f);
 
+        GameManager.Instance.CurrentEnemies.Remove(gameObject);
         Destroy(gameObject);
     }
 
